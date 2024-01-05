@@ -1,6 +1,6 @@
 Bonjour Louis, 
 
-Tu trouveras ci-joint le projet protfolio KVN HGS en HTML CSS JAVASCRIPT.
+Tu trouveras ci-joint le projet portfolio KVN HGS en HTML CSS JAVASCRIPT.
 
 Bonne réception.
 
