@@ -322,3 +322,52 @@ button:hover {
     background-color: red; /* Couleur de fond lors du survol */
     color: black; /* Couleur du texte lors du survol */
 }
+
+
+/* ... light mode ... */
+
+
+/* Styles par défaut (Dark Mode) */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Styles pour Light Mode */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Styles pour le bouton avec l'animation */
+#toggleMode {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition pour le background et le texte */
+}
+
+/* Style pour l'icône dans le bouton */
+#toggleMode i {
+    margin-right: 8px;
+    transition: transform 0.3s ease; /* Transition pour l'animation de rotation */
+}
+
+/* Animation de rotation de l'icône lors du survol du bouton */
+#toggleMode:hover i {
+    transform: rotate(180deg);
+}
+
+.light-mode #toggleMode {
+    background-color: white;
+    color: #333;
+    /* Change l'icône en lune pour le mode clair */
+}
+
+.light-mode #toggleMode i:before {
+    content: "\f186"; /* Code Unicode pour l'icône 'lune' de Font Awesome */
+}

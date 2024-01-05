@@ -41,3 +41,15 @@ function openTab(evt, tabName) {
     });
 });
 
+document.getElementById('toggleMode').addEventListener('click', function() {
+  var icon = this.querySelector('i');
+  
+  document.body.classList.toggle('light-mode');
+  
+  if(document.body.classList.contains('light-mode')){
+      this.innerHTML = '<i class="fas fa-moon"></i> Black mode'; // Change l'icône en lune
+  } else {
+      this.innerHTML = '<i class="fas fa-sun"></i> Light mode'; // Change l'icône en soleil
+  }
+});
+
