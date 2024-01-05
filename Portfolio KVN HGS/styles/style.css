@@ -339,6 +339,11 @@ body {
     color: black;
 }
 
+body:not(.light-mode) .social-icons a,
+body:not(.light-mode) h2 {
+    color: red; /* Texte rouge pour les icônes de réseaux sociaux et les titres h2 en mode sombre */
+}
+
 /* Styles pour le bouton avec l'animation */
 #toggleMode {
     display: inline-block;
