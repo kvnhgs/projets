@@ -5,6 +5,7 @@ Tu trouveras ci-joint le projet protfolio KVN HGS en HTML CSS JAVASCRIPT.
 Voici les éléments à résoudre :
 - Couleur onglet actif profil
 - Formulaire de contact inactif
+- Ancres couleur active
 
 Bonne réception.
 
