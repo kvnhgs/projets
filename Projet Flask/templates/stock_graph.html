@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}Graphiques des Stocks{% endblock %}
+
+{% block content %}
+
+<h2>Graphique des Actions d'Apple</h2>
+{{ apple_graph_html|safe }}
+
+<h2>Graphique des Actions de Tesla</h2>
+{{ tesla_graph_html|safe }}
+
+{% endblock %}

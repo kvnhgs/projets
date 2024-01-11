@@ -1,0 +1,99 @@
+
+/* Style tableau utilisateurs inscrits*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 2px solid red;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Style général du body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Assurez-vous que le contenu principal prend l'espace disponible */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Style du footer */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Centrer les éléments de la navbar */
+}
+
+/* Style des liens dans la navbar */
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+/* Changement de couleur au survol */
+.navbar a:hover {
+    background-color: red;
+    color: black;
+}
+
+/* Style du formulaire */
+form {
+    margin: auto;
+    width: 50%;
+    border: 3px solid red;
+    padding: 10px;
+}
+
+/* Style des titres */
+h1, h2 {
+    color: #333;
+}
+
+/* Classe pour les éléments textuels */
+.hello {
+    color: #333;
+    margin: 5px 0;
+}
+
+/* The James Mind */
+.project {
+    background: black;
+    color: white;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+
+img {
+    width: 400px;
+}

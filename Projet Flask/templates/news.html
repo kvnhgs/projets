@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+    <h1>Nouvelles pour {{ company }}</h1>
+    {% for news_item in news %}
+        <div>
+            <h2><a href="{{ news_item['link'] }}">{{ news_item['title'] }}</a></h2>
+            <p>{{ news_item['description'] }}</p>
+            <p>Publié le : {{ news_item['pubDate'] }}</p>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+

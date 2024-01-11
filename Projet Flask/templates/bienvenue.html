@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+      <h1>{{ message }}</h1>
+      <a href="{{ url_for('utilisateurs_inscrits') }}">Utilisateurs inscrits</a>
+
+{% endblock %}
+
+
