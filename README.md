@@ -1,4 +1,4 @@
-Projets KVN HGS
+# Projets KVN HGS
 
 - AKIGORA : Réalisation d'un dashboard d'analyse de données avec Streamlit pour l'entreprise AKIGORA, Bordeaux. (PYTHON)
 - Concepts mathématiques : Programmes mathématiques (PYTHON)
@@ -14,7 +14,7 @@ Chaque dossier dans le dépôt contient un README distinct avec des instructions
 
 
 
-ENGLISH
+# ENGLISH
 This repository contains a diverse collection of Python scripts, ranging from simple beginner programs to more advanced projects in machine learning and data visualization with Streamlit. Whether you're a beginner looking to learn the basics, or an intermediate/experienced user interested in machine learning and data dashboards, this repository has something for you.
 Content
 
