@@ -1,4 +1,4 @@
-Projet Flask
+# Projet Flask
 
 Utilisation de Flask pour créer une application.
 
@@ -10,7 +10,7 @@ Utilisation de Flask pour créer une application.
 - Page Graphiques avec deux plotly sur le prix des actions 2023 de Tesla et Apple
 - Page Prédiction MNIST avec la prédiction des chiffres et la possibilité de dessiner un chiffre
 
-Flask Project
+# Flask Project
 
 Using Flask to create an application.
 
