@@ -14,10 +14,10 @@ Utilisation de Flask pour créer une application.
 
 Using Flask to create an application.
 
-Home page with a form
-The James Mind page with images
-Registered Users page with a table grouping users
-News form page with the DEVAPI API on news from large companies
-Statistics page with CSV and XLSX file import, creation of a .describe() table
-Page Charts with two plotly on the 2023 stock prices of Tesla and Apple
-MNIST Prediction page with number prediction and ability to draw a number
+- Home page with a form
+- The James Mind page with images
+- Registered Users page with a table grouping users
+- News form page with the DEVAPI API on news from large companies
+- Statistics page with CSV and XLSX file import, creation of a .describe() table
+- Page Charts with two plotly on the 2023 stock prices of Tesla and Apple
+- MNIST Prediction page with number prediction and ability to draw a number
