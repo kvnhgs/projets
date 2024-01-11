@@ -1,18 +1,16 @@
 {% extends 'layout.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Chargement de Fichier{% endblock %}
 
 {% block content %}
-
-    <h1>Charger un fichier CSV ou Excel</h1>
-    <form action="/images/upload" method="post" enctype="multipart/form-data">
-        <label for="file">Choisir un fichier :</label>
-        <input type="file" id="file" name="file" accept=".csv, .xlsx"><br><br>
-        <input type="submit" value="Charger">
+<div class="form-container">
+    <h1 class="form-heading">Charger un fichier CSV ou Excel</h1>
+    <form action="upload" method="post" enctype="multipart/form-data" class="upload-form">
+        <div class="form-group">
+            <label for="file">Choisir un fichier :</label>
+            <input type="file" id="file" name="file" accept=".csv, .xlsx">
+        </div>
+        <button type="submit" class="submit-btn">Charger</button>
     </form>
-
+</div>
 {% endblock %}
-
-
-
-

@@ -1,19 +1,3 @@
-
-/* Style tableau utilisateurs inscrits*/
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 2px solid red;
-    padding: 8px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-
 /* Style général du body */
 body {
     font-family: Arial, sans-serif;
@@ -63,12 +47,55 @@ body {
     color: black;
 }
 
-/* Style du formulaire */
-form {
-    margin: auto;
-    width: 50%;
-    border: 3px solid red;
+/* Style du formulaire modernisé */
+.form-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    text-align: left;
+}
+
+.form-heading {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.form-group input[type="text"] {
+    width: 100%;
     padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: darkred;
 }
 
 /* Style des titres */
@@ -96,4 +123,386 @@ h1, h2 {
 
 img {
     width: 400px;
+}
+
+/* Style conteneur bilingue page accueil */
+.bilingual-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.bilingual-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bilingual-card h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.bilingual-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.bilingual-text p {
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bilingual-text p:first-child {
+    border-right: 2px solid red;
+}
+
+.bilingual-text p:last-child {
+    border-left: 2px solid red;
+}
+
+/* Page Utilisateurs inscrits */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.table-container {
+    overflow-x: auto; /* Pour la prise en charge du défilement sur petits écrans */
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: red;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid red;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: default;
+}
+
+/* Page Formulaire des news */
+.form-wrapper {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+
+.form-control {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+/* Page stats */
+.stats-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stats-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.stats-table {
+    overflow-x: auto;  /* Pour gérer les débordements de tableau sur petits écrans */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Espace entre le titre et le tableau */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: red;
+    color: white;
+}
+
+/* Page upload */
+.form-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    text-align: left;
+}
+
+.form-heading {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+/* Page news */
+
+.news-container {
+    max-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    text-align: left;
+}
+
+.news-heading {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.news-link {
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    color: darkred;
+}
+
+.news-description {
+    color: black;
+    margin: 10px 0;
+}
+
+.news-date {
+    color: #666;
+    font-style: italic;
+}
+
+/* Page stock_graph */
+.stock-graphs-container {
+    max-width: 1000px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    text-align: center;
+}
+
+.stock-graph {
+    margin-bottom: 40px;
+}
+
+.stock-graph h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+/* Page prédictions */
+.form-container {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    text-align: left;
+}
+
+.form-heading {
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.file-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    display: block; /* Make the button extend the full width */
+}
+
+.submit-btn:hover {
+    background-color: black;
+}
+
+.mnist-canvas {
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.prediction-result, .prediction-text {
+    color: red;
+    margin: 10px 0;
+}
+
+.draw-container {
+    margin-top: 40px;
+}
+
+.clear-btn {
+    background-color: black;
+    margin-left: 0; /* Align with the predict button */
+}
+
+.clear-btn:hover {
+    background-color: #333;
+}
+
+/* Additional styles to align with the upload page */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
 }

@@ -1,14 +1,12 @@
 {% extends 'layout.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Statistiques{% endblock %}
 
 {% block content %}
-
-    <h1>Statistiques du Fichier Chargé</h1>
-    <div>{{ tables | safe }}</div>
-
+<div class="stats-container">
+    <h1 class="stats-title">Statistiques du Fichier Chargé</h1>
+    <div class="stats-table">
+        {{ tables | safe }}
+    </div>
+</div>
 {% endblock %}
-
-
-
-

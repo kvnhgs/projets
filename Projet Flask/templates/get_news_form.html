@@ -1,18 +1,16 @@
 {% extends 'layout.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Recherche de Nouvelles{% endblock %}
 
 {% block content %}
-
-    <h1>Recherche de Nouvelles d'Entreprise</h1>
-    <form action="/get-news-form" method="post">
-        <label for="company">Nom de l'Entreprise :</label>
-        <input type="text" id="company" name="company" required>
-        <input type="submit" value="Rechercher">
+<div class="form-wrapper">
+    <h1 class="form-title">Recherche de Nouvelles d'Entreprise</h1>
+    <form action="/get-news-form" method="post" class="news-form">
+        <div class="form-group">
+            <label for="company" class="form-label">Nom de l'Entreprise :</label>
+            <input type="text" id="company" name="company" class="form-control" required>
+        </div>
+        <button type="submit" class="submit-btn">Rechercher</button>
     </form>
-
+</div>
 {% endblock %}
-
-
-
-

@@ -1,18 +1,16 @@
 {% extends 'layout.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Nouvelles{% endblock %}
 
 {% block content %}
-
-    <h1>Nouvelles pour {{ company }}</h1>
+<div class="news-container">
+    <h1 class="news-heading">Nouvelles pour {{ company }}</h1>
     {% for news_item in news %}
-        <div>
-            <h2><a href="{{ news_item['link'] }}">{{ news_item['title'] }}</a></h2>
-            <p>{{ news_item['description'] }}</p>
-            <p>Publié le : {{ news_item['pubDate'] }}</p>
+        <div class="news-item">
+            <h2><a href="{{ news_item['link'] }}" class="news-link">{{ news_item['title'] }}</a></h2>
+            <p class="news-description">{{ news_item['description'] }}</p>
+            <p class="news-date">Publié le : {{ news_item['pubDate'] }}</p>
         </div>
     {% endfor %}
-
+</div>
 {% endblock %}
-
-

@@ -29,12 +29,14 @@ df = pd.read_excel('data/tesla_apple.xlsx')
 
 
 def create_stock_graph(df, company_name):
-    # Filtrer les données pour l'entreprise spécifiée
+    # Filter data for the specified company
     filtered_df = df[df['Entreprise'] == company_name]
-    # Transformer les données pour avoir les dates en colonne et les prix en ligne
+    # Transform data to have dates as column and price as values
     filtered_df = filtered_df.melt(id_vars=['Entreprise'], var_name='Date', value_name='Prix')
-    # Créer le graphique
+    # Create the graph
     fig = px.line(filtered_df, x='Date', y='Prix', title=f'Prix des Actions de {company_name}')
-    # Convertir le graphique en HTML
+    fig.update_traces(line=dict(color='red'))  # Set line color to red
+    # Convert graph to HTML
     graph_html = fig.to_html()
     return graph_html
+

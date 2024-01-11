@@ -1,29 +1,31 @@
 {% extends 'layout.html' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}Utilisateurs Inscrits{% endblock %}
 
 {% block content %}
-
-    <h1>Liste des utilisateurs inscrits</h1>
-    <table>
-        <tr>
-            <th>Pseudo</th>
-            <th>Nom</th>
-            <th>Prénom</th>
-            <th>Sexe</th>
-        </tr>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.pseudo }}</td>
-                <td>{{ user.nom }}</td>
-                <td>{{ user.prenom }}</td>
-                <td>{{ user.sexe }}</td>
-            </tr>
-        {% endfor %}
-    </table>
-
+<div class="container">
+    <h1 class="page-heading">Liste des utilisateurs inscrits</h1>
+    <div class="table-container">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Pseudo</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Sexe</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.pseudo }}</td>
+                    <td>{{ user.nom }}</td>
+                    <td>{{ user.prenom }}</td>
+                    <td>{{ user.sexe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock %}
-
-
-
-

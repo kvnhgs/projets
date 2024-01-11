@@ -3,18 +3,66 @@
 {% block title %}Accueil{% endblock %}
 
 {% block content %}
-    <h1 class="hello"> {{ message_home }}</h1>
 
-    <h2>Veuillez remplir le formulaire</h2>
-    <form action="/envoi-infos" method="POST">
-        <p>Votre prénom</p>
-        <input type="text" name="prénom">
-        <p>Votre nom</p>
-        <input type="text" name="nom">
-        <p>Votre sexe (F/ M)</p>
-        <input type="text" name="sexe">
-        <p>Votre pseudo</p>
-        <input type="text" name="pseudo"><br><br>
-        <button type="submit">OK</button>
+<div class="form-container">
+    <h1 class="form-heading">Bienvenue</h1>
+    <form action="/envoi-infos" method="POST" class="user-form">
+        <div class="form-group">
+            <label for="prenom">Votre prénom</label>
+            <input type="text" name="prénom" id="prenom" required>
+        </div>
+        <div class="form-group">
+            <label for="nom">Votre nom</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+        <div class="form-group">
+            <label for="sexe">Votre sexe (F/ M)</label>
+            <input type="text" name="sexe" id="sexe" required>
+        </div>
+        <div class="form-group">
+            <label for="pseudo">Votre pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" required>
+        </div>
+        <button type="submit" class="submit-btn">OK</button>
     </form>
+</div>
+
+<div class="bilingual-container">
+    <div class="bilingual-card">
+        <h2>Projet Flask / Flask Project</h2>
+        <div class="bilingual-text">
+            <p>Utilisation de Flask pour créer une application.</p>
+            <p>Using Flask to create an application.</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Accueil avec un formulaire</p>
+            <p>Home page with a form</p>
+        </div>
+        <div class="bilingual-text">
+            <p>The James Mind avec des images</p>
+            <p>The James Mind with images</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Utilisateurs inscrits avec un tableau regroupant les utilisateurs</p>
+            <p>Registered Users with a table grouping users</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Formulaire de news avec l'API DEVAPI sur les news de grandes entreprises</p>
+            <p>News form with the DEVAPI API on news from large companies</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Statistiques avec l'importation de fichier CSV et XLSX, création d'un tableau .describe()</p>
+            <p>Statistics with CSV and XLSX file import, creation of a .describe() table</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Graphiques avec deux plotly sur le prix des actions 2023 de Tesla et Apple</p>
+            <p>Charts with two plotly on the 2023 stock prices of Tesla and Apple</p>
+        </div>
+        <div class="bilingual-text">
+            <p>Prédiction MNIST avec la prédiction des chiffres et la possibilité de dessiner un chiffre</p>
+            <p>MNIST Prediction with number prediction and ability to draw a number</p>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
