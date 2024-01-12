@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -15,7 +16,7 @@
             <a href="{{ url_for('hello') }}">ACCUEIL</a>
             <a href="{{ url_for('jms') }}">The James Mind</a>
             <a href="{{ url_for('utilisateurs_inscrits') }}">Utilisateurs inscrits</a>
-            <a href="{{ url_for('get_news_form') }}">Formulaire des news</a>
+            <a href="{{ url_for('get_news_form') }}">Nouvelles des entreprises</a>
             <a href="{{ url_for('upload') }}">Statistiques</a>
             <a href="{{ url_for('stock_graph', company=['Apple', 'Tesla']) }}">Graphiques</a>
             <a href="{{ url_for('prediction') }}">Prédictions</a>
@@ -28,6 +29,20 @@
     </main>
 
     <footer class="footer">
+        <div class="social-icons">
+            <a href="https://github.com/kvnhgs" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/kvnhgs" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kevinheugas" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.kvn-hgs.com" target="_blank">
+                <i class="fas fa-globe"></i>
+            </a>
+        </div>
         <p class="footer">© 2024 KVN HGS | CREATE & SHARE | Entité | The James Mind | KhratZ World</p>
     </footer>
 </body>

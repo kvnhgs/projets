@@ -5,7 +5,7 @@
 {% block content %}
 
 <div class="form-container">
-    <h1 class="form-heading">Bienvenue</h1>
+    <h1 class="form-heading">Bienvenue sur mon premier projet Flask</h1>
     <form action="/envoi-infos" method="POST" class="user-form">
         <div class="form-group">
             <label for="prenom">Votre prénom</label>
@@ -16,7 +16,7 @@
             <input type="text" name="nom" id="nom" required>
         </div>
         <div class="form-group">
-            <label for="sexe">Votre sexe (F/ M)</label>
+            <label for="sexe">Votre sexe</label>
             <input type="text" name="sexe" id="sexe" required>
         </div>
         <div class="form-group">
@@ -29,7 +29,10 @@
 
 <div class="bilingual-container">
     <div class="bilingual-card">
-        <h2>Projet Flask / Flask Project</h2>
+        <div class="bilingual-text">
+            <p class="text-large"><strong>Projet Flask</strong></p>
+            <p class="text-large"><strong>Flask Project</strong></p>
+        </div>
         <div class="bilingual-text">
             <p>Utilisation de Flask pour créer une application.</p>
             <p>Using Flask to create an application.</p>

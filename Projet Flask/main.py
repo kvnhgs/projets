@@ -1,34 +1,25 @@
 from flask import Flask, render_template, request, jsonify, redirect
 import pandas as pd
 import numpy as np
-from PIL import Image, ImageOps
+from PIL import Image
 from utils import fetch_company_news, create_stock_graph
 from models import User, db
-from sklearn import datasets, svm
 import base64
 import io
-import os
-from werkzeug.utils import secure_filename
 from sklearn import datasets, svm
 from sklearn.model_selection import train_test_split
 import joblib
 
-# Charger les données MNIST
+# Prédictions
 digits = datasets.load_digits()
-
-# Diviser les données en ensembles d'entraînement et de test
 X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, test_size=0.2, random_state=42)
-
-# Créer et entraîner un classificateur SVM
 clf = svm.SVC(gamma=0.001)
 clf.fit(X_train, y_train)
-
-# Évaluer le modèle sur les données de test
 accuracy = clf.score(X_test, y_test)
 print(f"Accuracy: {accuracy}")
-
-# Sauvegarder le modèle dans un fichier .pkl
 joblib.dump(clf, 'mnist_model.pkl')
+model = joblib.load('mnist_model.pkl')
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
@@ -42,9 +33,6 @@ with app.app_context():
 
 # Dataset
 df = pd.read_excel('data/tesla_apple.xlsx')
-
-# Charger le modèle
-model = joblib.load('mnist_model.pkl')
 
 # Route accueil
 @app.route("/")
@@ -96,13 +84,9 @@ def upload():
             elif '.xlsx' in uploaded_file.filename:
                 df = pd.read_excel(uploaded_file)
 
-            # Générer les statistiques et les convertir en HTML
             stats_html = df.describe().to_html()
-
-            # Nettoyer les caractères indésirables
             stats_html_clean = stats_html.strip("[' ]")
 
-            # Passer la chaîne nettoyée au template
             return render_template('stats.html', tables=stats_html_clean)
     return render_template('upload.html')
 
@@ -113,7 +97,7 @@ def get_news_form():
     if request.method == 'POST':
         company = request.form['company']
         news_data = fetch_company_news(company)
-        if news_data:  # Ici, on vérifie simplement si news_data n'est pas vide
+        if news_data:
             return render_template("news.html", news=news_data, company=company)
         else:
             return f"Pas de nouvelles disponibles pour {company}."
@@ -139,18 +123,15 @@ def prediction():
     prediction_result = None
 
     if request.method == 'POST':
-        # Vérifier si le fichier a été envoyé
         if 'file' not in request.files:
             return redirect(request.url)
 
         file = request.files['file']
 
-        # Vérifier si l'utilisateur a sélectionné un fichier
         if file.filename == '':
             return redirect(request.url)
 
         if file:
-            # Préparer l'image pour la prédiction
             image = Image.open(file.stream).convert('L')
             image = image.resize((8, 8), Image.Resampling.LANCZOS)
             image = np.array(image)
@@ -162,18 +143,15 @@ def prediction():
 # Route prédiction dessin
 @app.route('/predict', methods=['POST'])
 def prediction_dessin():
-    data = request.get_json()  # Récupère les données JSON de la requête
+    data = request.get_json()
     if data and 'image' in data:
         image_base64 = data['image']
-        # Supprimer l'en-tête de données base64
         image_data = base64.b64decode(image_base64.split(',')[1])
         image = Image.open(io.BytesIO(image_data)).convert('L')
         image = image.resize((8, 8), Image.Resampling.LANCZOS)
 
-        # Traitement de l'image pour le modèle
         image_array = np.array(image).reshape(1, -1)
 
-        # Prédiction
         prediction = model.predict(image_array)[0]
 
         return jsonify({'prediction': int(prediction)})

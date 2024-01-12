@@ -12,9 +12,9 @@ def fetch_company_news(company_name):
     try:
         response = requests.get(url, headers=headers, params=params)
         if response.status_code == 200:
-            return response.json().get("body", [])  # Retourne la liste des nouvelles
+            return response.json().get("body", [])
         else:
-            return []  # Retourne une liste vide si le statut n'est pas 200
+            return []
     except requests.RequestException as e:
         return []
 
@@ -29,14 +29,10 @@ df = pd.read_excel('data/tesla_apple.xlsx')
 
 
 def create_stock_graph(df, company_name):
-    # Filter data for the specified company
     filtered_df = df[df['Entreprise'] == company_name]
-    # Transform data to have dates as column and price as values
     filtered_df = filtered_df.melt(id_vars=['Entreprise'], var_name='Date', value_name='Prix')
-    # Create the graph
     fig = px.line(filtered_df, x='Date', y='Prix', title=f'Prix des Actions de {company_name}')
-    fig.update_traces(line=dict(color='red'))  # Set line color to red
-    # Convert graph to HTML
+    fig.update_traces(line=dict(color='red'))
     graph_html = fig.to_html()
     return graph_html
 
